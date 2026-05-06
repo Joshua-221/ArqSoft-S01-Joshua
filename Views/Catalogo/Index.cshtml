@@ -1,0 +1,56 @@
+@model IEnumerable<Catalogo.Models.Item>
+
+@{
+    ViewData["Title"] = "Catálogo de Videojuegos";
+}
+
+<div class="container mt-4">
+    <h1 class="text-light bg-dark p-3 rounded">🎮 Mi Catálogo de Videojuegos</h1>
+
+    <!-- Paso 5: Filtro por género -->
+    <div class="my-4">
+        <label class="fw-bold">Filtrar por Género:</label>
+        <div class="btn-group" role="group">
+            <a asp-action="Index" class="btn btn-outline-primary">Todos</a>
+            @if (ViewBag.Generos != null)
+            {
+                foreach (var gen in ViewBag.Generos as List<string>)
+                {
+                    <a asp-action="Index" asp-route-genero="@gen" class="btn btn-outline-info">@gen</a>
+                }
+            }
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- Paso 4: Visualización de la lista -->
+    <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">@item.Titulo</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@item.Genero | @item.Ano</h6>
+                            <p class="card-text"><strong>Consola:</strong> @item.Consola</p>
+                            
+                            <!-- Paso 6: Enlace a Ficha Técnica -->
+                            <a asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-success w-100">Ver Ficha Técnica</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-warning">No se encontraron videojuegos en el catálogo.</div>
+        }
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Agregar" class="btn btn-dark">+ Agregar Nuevo Videojuego</a>
+    </div>
+</div>

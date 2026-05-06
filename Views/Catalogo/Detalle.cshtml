@@ -1,0 +1,21 @@
+@model Catalogo.Models.Item
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h2>Ficha Técnica: @Model.Titulo</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>ID:</strong> @Model.Id</p>
+            <p><strong>Género:</strong> @Model.Genero</p>
+            <p><strong>Año de lanzamiento:</strong> @Model.Ano</p>
+            <p><strong>Consola original:</strong> @Model.Consola</p>
+            <hr />
+            <h5>Descripción:</h5>
+            <p>@Model.Descripcion</p>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Index" class="btn btn-secondary">Volver al Catálogo</a>
+        </div>
+    </div>
+</div>
