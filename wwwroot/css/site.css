@@ -1,31 +1,72 @@
-html {
-  font-size: 14px;
+:root {
+    --primary-neon: #00f2ff; /* Cyan LED */
+    --secondary-neon: #7000ff; /* Purple LED */
+    --accent-neon: #ff00c1; /* Pink LED */
+    --bg-dark: #0f0f12; /* Fondo casi negro */
+    --card-bg: #1a1a20; /* Fondo de tarjeta */
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Fondo general estilo Gamer */
 body {
-  margin-bottom: 60px;
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Animación de luces LED en el título */
+.rgb-title {
+    background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon), var(--accent-neon), var(--primary-neon));
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rgb-flow 5s linear infinite;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+@keyframes rgb-flow {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
+}
+
+/* Tarjetas con borde de Neón */
+.game-card-anim {
+    opacity: 0;
+    animation: fallDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.card-gamer {
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px !important;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-gamer:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary-neon) !important;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+/* Espacio para el logo con degradado RGB */
+.logo-container {
+    background: linear-gradient(45deg, #121212, #2a2a2a);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--secondary-neon);
+}
+
+.logo-container i {
+    font-size: 4rem;
+    filter: drop-shadow(0 0 10px var(--primary-neon));
+}
+
+/* Animación de caída */
+@keyframes fallDown {
+    0% { opacity: 0; transform: translateY(-70px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
