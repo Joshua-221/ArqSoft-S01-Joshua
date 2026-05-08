@@ -1,20 +1,20 @@
 @model Catalogo.Models.Item
 
 <div class="container mt-5">
-    <div class="card shadow">
-        <div class="card-header bg-primary text-white">
-            <h2>Ficha Técnica: @Model.Titulo</h2>
+    <div class="card-gamer">
+        <div style="padding: 1.5rem; border-bottom: 1px solid var(--borde-sutil);">
+            <h2 class="rgb-title" style="margin: 0;">Ficha Técnica: @Model.Titulo</h2>
         </div>
-        <div class="card-body">
-            <p><strong>ID:</strong> @Model.Id</p>
-            <p><strong>Género:</strong> @Model.Genero</p>
-            <p><strong>Año de lanzamiento:</strong> @Model.Ano</p>
-            <p><strong>Consola original:</strong> @Model.Consola</p>
-            <hr />
-            <h5>Descripción:</h5>
-            <p>@Model.Descripcion</p>
+        <div style="padding: 2rem;">
+            <p><strong style="color: var(--neon-cian);">ID:</strong> @Model.Id</p>
+            <p><strong style="color: var(--neon-cian);">Género:</strong> @Model.Genero</p>
+            <p><strong style="color: var(--neon-cian);">Año de lanzamiento:</strong> @Model.Ano</p>
+            <p><strong style="color: var(--neon-cian);">Consola original:</strong> @Model.Consola</p>
+            <hr style="border-color: var(--borde-sutil);" />
+            <h5 style="color: var(--neon-verde); font-weight: 600; font-family: 'Orbitron', monospace;">Descripción:</h5>
+            <p style="color: var(--texto-suave);">@Model.Descripcion</p>
         </div>
-        <div class="card-footer">
+        <div style="padding: 1.5rem; border-top: 1px solid var(--borde-sutil); display: flex; gap: 1rem;">
             <a asp-action="Index" class="btn btn-secondary">Volver al Catálogo</a>
         </div>
     </div>

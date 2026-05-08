@@ -1,13 +1,24 @@
 @model IEnumerable<Catalogo.Models.Item>
 
+@{
+    ViewData["Title"] = "Catálogo";
+}
+
 <div class="container mt-4">
-    <div class="text-center mb-5">
-        <h1 class="rgb-title display-4">🎮 My Gamer Vault</h1>
-        <p class="text-muted">Software Engineering Collection - Joshua Isaí</p>
+
+    <!-- Encabezado -->
+    <div class="text-center mb-4">
+        <h1 class="rgb-title display-4 mb-2">🎮 Mi Bóveda Gamer</h1>
+        <p class="text-muted" style="font-family:'Rajdhani',sans-serif; letter-spacing:2px; font-size:0.85rem; text-transform:uppercase">
+            Colección de Ingeniería en Software — Joshua Isaí
+        </p>
     </div>
 
-    <div class="d-flex justify-content-center mb-4">
-        <div class="btn-group shadow-lg">
+    <!-- Barra de acciones: filtros + botón agregar -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+
+        <!-- Filtros por género -->
+        <div class="btn-group shadow-lg flex-wrap gap-1" style="border:none">
             <a asp-action="Index" class="btn btn-outline-info btn-sm">TODOS</a>
             @if (ViewBag.Generos != null)
             {
@@ -17,27 +28,45 @@
                 }
             }
         </div>
+
+        <!-- Botón Agregar -->
+        <a asp-action="Agregar" class="btn btn-success btn-sm px-4">
+            <i class="bi bi-plus-circle me-1"></i> AGREGAR JUEGO
+        </a>
+
     </div>
 
+    <!-- Cuadrícula de juegos -->
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="col-md-4 mb-4 game-card-anim">
                 <div class="card h-100 card-gamer text-white">
                     <div class="logo-container">
-                        <span style="font-size: 4rem;">👾</span>
+                        <span style="font-size: 3.8rem; filter: drop-shadow(0 0 10px rgba(0,212,255,0.6))">👾</span>
                     </div>
-                    <div class="card-body">
-                        <h5 class="fw-bold mb-1" style="color: var(--primary-neon)">@item.Titulo</h5>
-                        <p class="small text-muted mb-3">@item.Genero.ToUpper() | @item.Ano</p>
-                        <p class="card-text"><i class="bi bi-cpu"></i> <strong>SISTEMA:</strong> @item.Consola</p>
-                        <a asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-sm btn-primary w-100 mt-3 shadow-sm" 
-                           style="background: var(--secondary-neon); border: none;">
-                           CONFIGURACIÓN
+                    <div class="card-body pt-1">
+                        <div class="d-flex gap-2 mb-2 flex-wrap">
+                            <span style="background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.3);color:var(--neon-cian);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.68rem;letter-spacing:1.5px;padding:.2rem .6rem;border-radius:4px;text-transform:uppercase">
+                                @item.Genero
+                            </span>
+                            <span style="background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.3);color:var(--neon-purpura);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.68rem;letter-spacing:1.5px;padding:.2rem .6rem;border-radius:4px;text-transform:uppercase">
+                                @item.Consola
+                            </span>
+                        </div>
+                        <h5 class="fw-bold mb-1" style="font-family:'Orbitron',monospace; font-size:0.95rem; color:var(--neon-cian); letter-spacing:1px">
+                            @item.Titulo
+                        </h5>
+                        <p class="small mb-3" style="color:var(--texto-suave); letter-spacing:1px; font-size:0.8rem">
+                            <i class="bi bi-calendar3 me-1"></i>@item.Ano
+                        </p>
+                        <a asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-primary btn-sm w-100 mt-auto">
+                            <i class="bi bi-info-circle me-1"></i>VER FICHA
                         </a>
                     </div>
                 </div>
             </div>
         }
     </div>
+
 </div>
