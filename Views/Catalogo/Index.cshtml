@@ -42,16 +42,9 @@
         {
             <div class="col-md-4 mb-4 game-card-anim">
                 <div class="card h-100 card-gamer text-white">
-                    @if (!string.IsNullOrEmpty(item.ImagenUrl))
-                    {
-                        <img src="@item.ImagenUrl" alt="@item.Titulo" style="height: 200px; object-fit: cover; border-bottom: 1px solid var(--borde-sutil);" />
-                    }
-                    else
-                    {
-                        <div class="logo-container">
-                            <span style="font-size: 4.5rem; filter: drop-shadow(0 0 10px rgba(0,212,255,0.6))">👾</span>
-                        </div>
-                    }
+                    <div class="logo-container">
+                        <span style="font-size: 4.5rem; filter: drop-shadow(0 0 10px rgba(0,212,255,0.6))">👾</span>
+                    </div>
                     <div class="card-body pt-1">
                         <div class="d-flex gap-2 mb-2 flex-wrap">
                             <span style="background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.3);color:var(--neon-cian);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.68rem;letter-spacing:1.5px;padding:.2rem .6rem;border-radius:4px;text-transform:uppercase">

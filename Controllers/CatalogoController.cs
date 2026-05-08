@@ -14,7 +14,8 @@ public class CatalogoController : Controller
             Genero = "Hack and Slash", 
             Ano = 2001, 
             Consola = "PS2", 
-            Descripcion = "Acción estilizada protagonizada por el cazador de demonios Dante." 
+            Descripcion = "Acción estilizada protagonizada por el cazador de demonios Dante.",
+            ImagenUrl = "https://upload.wikimedia.org/wikipedia/en/a/a2/Devil_May_Cry_cover.jpg"
         },
         new Item { 
             Id = 2, 
@@ -22,7 +23,8 @@ public class CatalogoController : Controller
             Genero = "Metroidvania", 
             Ano = 1997, 
             Consola = "PS1", 
-            Descripcion = "Exploración no lineal en el castillo de Drácula con Alucard." 
+            Descripcion = "Exploración no lineal en el castillo de Drácula con Alucard.",
+            ImagenUrl = "https://upload.wikimedia.org/wikipedia/en/7/73/Castlevania_-_Symphony_of_the_Night_Coverart.png"
         },
         new Item { 
             Id = 3, 
@@ -30,7 +32,8 @@ public class CatalogoController : Controller
             Genero = "Action RPG", 
             Ano = 2017, 
             Consola = "PS4", 
-            Descripcion = "Combates fluidos y una narrativa profunda sobre la existencia humana." 
+            Descripcion = "Combates fluidos y una narrativa profunda sobre la existencia humana.",
+            ImagenUrl = "https://upload.wikimedia.org/wikipedia/en/b/b2/NieR_Automata_Cover_Art.jpg"
         },
         new Item { 
             Id = 4, 
@@ -38,7 +41,8 @@ public class CatalogoController : Controller
             Genero = "Shooter", 
             Ano = 2001, 
             Consola = "Xbox", 
-            Descripcion = "El inicio de la legendaria guerra entre la humanidad y el Covenant." 
+            Descripcion = "El inicio de la legendaria guerra entre la humanidad y el Covenant.",
+            ImagenUrl = "https://upload.wikimedia.org/wikipedia/en/7/75/Halo_CE_Box_Art.jpg"
         },
         new Item { 
             Id = 5, 
@@ -46,7 +50,8 @@ public class CatalogoController : Controller
             Genero = "Action RPG", 
             Ano = 2022, 
             Consola = "PC", 
-            Descripcion = "Exploración en un vasto mundo abierto lleno de desafíos y jefes épicos." 
+            Descripcion = "Exploración en un vasto mundo abierto lleno de desafíos y jefes épicos.",
+            ImagenUrl = "https://upload.wikimedia.org/wikipedia/en/0/0f/Elden_Ring_Box_Art.jpg"
         }
     };
 
