@@ -67,7 +67,7 @@ body {
 .icono-flotante {
   position: absolute;
   top: 0;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   filter: drop-shadow(0 0 6px currentColor);
   animation: caida linear infinite;
 }
@@ -84,12 +84,12 @@ body {
 .icono-flotante:nth-child(10) { left: 76%;  animation-duration: 8.2s; animation-delay: 1.5s;  color: #a855f7; }
 .icono-flotante:nth-child(11) { left: 84%;  animation-duration: 9.8s; animation-delay: 3.6s;  color: #ff2056; }
 .icono-flotante:nth-child(12) { left: 92%;  animation-duration: 7.8s; animation-delay: 5.0s;  color: #00ff88; }
-.icono-flotante:nth-child(13) { left: 8%;   animation-duration: 11.5s;animation-delay: 4.3s;  color: #00d4ff; font-size:1.2rem; }
-.icono-flotante:nth-child(14) { left: 33%;  animation-duration: 6.5s; animation-delay: 2.1s;  color: #ff7700; font-size:2.0rem; }
-.icono-flotante:nth-child(15) { left: 55%;  animation-duration: 10.2s;animation-delay: 0.6s;  color: #a855f7; font-size:1.3rem; }
-.icono-flotante:nth-child(16) { left: 72%;  animation-duration: 8.8s; animation-delay: 3.9s;  color: #00ff88; font-size:1.8rem; }
-.icono-flotante:nth-child(17) { left: 88%;  animation-duration: 7.2s; animation-delay: 1.0s;  color: #00d4ff; font-size:1.4rem; }
-.icono-flotante:nth-child(18) { left: 16%;  animation-duration: 12s;  animation-delay: 5.5s;  color: #ff2056; font-size:1.1rem; }
+.icono-flotante:nth-child(13) { left: 8%;   animation-duration: 11.5s;animation-delay: 4.3s;  color: #00d4ff; font-size:1.8rem; }
+.icono-flotante:nth-child(14) { left: 33%;  animation-duration: 6.5s; animation-delay: 2.1s;  color: #ff7700; font-size:2.8rem; }
+.icono-flotante:nth-child(15) { left: 55%;  animation-duration: 10.2s;animation-delay: 0.6s;  color: #a855f7; font-size:1.9rem; }
+.icono-flotante:nth-child(16) { left: 72%;  animation-duration: 8.8s; animation-delay: 3.9s;  color: #00ff88; font-size:2.6rem; }
+.icono-flotante:nth-child(17) { left: 88%;  animation-duration: 7.2s; animation-delay: 1.0s;  color: #00d4ff; font-size:2.0rem; }
+.icono-flotante:nth-child(18) { left: 16%;  animation-duration: 12s;  animation-delay: 5.5s;  color: #ff2056; font-size:1.7rem; }
 
 /* =====================================================
    ANIMACIONES RGB

@@ -8,5 +8,6 @@ namespace Catalogo.Models
         public int Ano { get; set; }
         public string Consola { get; set; }
         public string Descripcion { get; set; }
+        public string ImagenUrl { get; set; }
     }
 }
